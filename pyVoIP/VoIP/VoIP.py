@@ -184,6 +184,9 @@ class VoIPCall:
                 self.port = m
                 self.assignedPorts[m] = self.ms[m]
 
+    def get_state(self):
+        return self.state
+    
     def createRTPClients(
         self,
         codecs: Dict[int, RTP.PayloadType],
